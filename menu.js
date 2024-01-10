@@ -16,9 +16,6 @@ document.querySelectorAll(".nav-link").forEach((n) =>
 );
 
 window.addEventListener("scroll", () => {
-  if (this.scrollY >= 85) {
-    navMenu.classList.add("on-scroll");
-  } else {
-    navMenu.classList.remove("on-scroll");
-  }
+  navMenu.classList.remove("active");
+  hamburger.classList.remove("active");
 });
