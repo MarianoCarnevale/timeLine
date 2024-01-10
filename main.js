@@ -1,28 +1,5 @@
 "use strict";
 
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
-
-document.querySelectorAll(".nav-link").forEach((n) =>
-  n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-  })
-);
-
-window.addEventListener("scroll", () => {
-  if (this.scrollY >= 85) {
-    navMenu.classList.add("on-scroll");
-  } else {
-    navMenu.classList.remove("on-scroll");
-  }
-});
-
 const url = "./zelda.json";
 
 function getZelda() {
@@ -35,7 +12,7 @@ function getZelda() {
       const timelineElement = document.getElementById("timeline");
       data.forEach((evento) => {
         // Contenedor principal de la tarjeta y círculo
-        const container = document.createElement("div");
+        const container = document.createElement("li");
         container.className = "card-container";
 
         // Círculo de la línea de tiempo
@@ -43,7 +20,7 @@ function getZelda() {
         timelineCircle.className = "timeline-circle";
 
         // Tarjeta
-        const card = document.createElement("div");
+        const card = document.createElement("article");
         card.className = "card";
 
         // Añadir imagen si está presente en el JSON
