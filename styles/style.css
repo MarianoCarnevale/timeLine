@@ -2,11 +2,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto";
 }
 
 header {
   background-image: url(../images/descarga.jpg);
-  height: 100vh;
+  aspect-ratio: 16/9;
   background-size: 100%;
   z-index: 0;
   position: relative;
@@ -81,19 +82,126 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 2rem; */
-  /* width: 80%; */
-  /* padding: 2rem; */
-  margin: 4rem;
+  margin: 4rem auto;
   text-align: center;
   gap: 2rem;
+  max-width: 1000px;
+}
+/** -------------TIMELINE-------------------- */
+main {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  margin: auto;
+  gap: 0.5rem;
+  position: relative;
+}
+.line {
+  width: 5px;
+  color: blue;
+  background-color: black;
+  position: absolute;
+  height: 100%;
+  left: 3%;
+}
+
+.timeline-circle {
+  width: 30px;
+  height: 30px;
+  background: #3f51b5;
+  border-radius: 50%;
+  position: absolute;
+  left: calc(3% - 12.5px);
+}
+
+.img-container {
+  width: 100%;
+}
+
+/** -------------CARDS-------------------- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 90%;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 1000px;
+}
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* max-width: 400px; */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+div.card h3 {
+  margin: 1.5rem auto 0;
+  text-align: center;
+}
+
+div.card p:nth-of-type(1) {
+  margin: 0.5rem auto;
+}
+div.card :nth-of-type(2) {
+  margin: 0.5rem auto;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  header {
+    background-size: cover;
+    background-position-x: -438px;
+    height: 70vh;
+    aspect-ratio: auto;
+  }
+  .card-container {
+    margin: 5% auto;
+    width: 90%;
+  }
+}
+@media (min-width: 720px) {
+  .line {
+    position: absolute;
+    height: 100%;
+    left: calc(50% - 2.5px);
+  }
+  .timeline-circle {
+    left: calc(50% - 15px);
+  }
+  .card {
+    max-width: 400px;
+    width: 45%;
+  }
+  .card-container:nth-child(odd) {
+    justify-content: start;
+  }
+  .card-container:nth-child(even) {
+    justify-content: end;
+  }
 }
 
 @media (max-width: 1024px) {
   /* header {
-    background-size: contain;
-    height: 70vh;
-  } */
+      background-size: contain;
+      height: 70vh;
+    } */
   .hamburger {
     display: block;
   }
@@ -128,13 +236,5 @@ a {
   .nav-menu.active {
     top: 69px;
     z-index: -1;
-  }
-}
-
-@media (max-width: 720px) {
-  header {
-    background-size: cover;
-    background-position-x: -438px;
-    height: 70vh;
   }
 }
