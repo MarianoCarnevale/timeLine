@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./styles/style.css" />
-    <!-- <link rel="stylesheet" href="./styles/style-form.css" /> -->
+    <link rel="stylesheet" href="./styles/style-form.css" />
   </head>
+  <body>
   <header class="zelda-bg">
     <div class="container">
       <nav class="navbar">
@@ -18,10 +19,10 @@
             <a href="#" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">About</a>
+            <a href="#about" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Contact</a>
+            <a href="#contact" class="nav-link">Contact</a>
           </li>
         </ul>
         <div class="hamburger">
@@ -31,10 +32,10 @@
         </div>
       </nav>
     </div>
-  </header>
+  </header >
   <section class="detail">
-    <h2>Juegos Principales y Detalles</h2>
-    <p>
+    <h2 id="about">Juegos Principales y Detalles</h2>
+    <p >
       Bienvenido a nuestra página dedicada a explorar la fascinante línea
       temporal de la serie de videojuegos The Legend of Zelda. Aquí encontrarás
       detalles y curiosidades sobre los juegos principales que conforman la rica
@@ -47,36 +48,45 @@
     <div class="line"></div>
     <ul id="timeline" class="timeline"></ul>
   </main>
-  <footer>
-    <!-- <form action="">
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" required />
+  <footer id="contact">
+    <h3>Contact us</h3>
+    <form id="contactForm" action="#">
+      <ul>
+        <li class="half-form">
+            <label for="name"></label>
+            <input type="text" name="name" id="name" placeholder="Name" />
 
-      <label for="lastname">Last Name</label>
-      <input type="text" name="lastname" id="lastname" required />
+        </li>
+        <li class="half-form">
+          <label for="lastname"></label>
+          <input type="text" name="lastname" id="lastname" placeholder="Last name"/>
 
-      <label for="email">Email</label>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="example@example.com"
-        required
-      />
+        </li>
+        <li class="half-form">	
+              <label for="email"></label>
+              <input type="email" name="email" id="email" placeholder="Email" />
 
-      <label for="tel">Phone</label>
-      <input type="tel" name="telephone" id="telephone" />
+        </li>
+        <li class="half-form">
+          <label for="tel"></label>
+          <input type="tel" name="telephone" id="tel" placeholder=Telephone >     
 
-      <label for="birth">Date of Birth</label>
-      <input type="date" name="birth" id="birth" required />
-
-      <button type="submit">Submit</button>
-      <button type="button">Cancel</button>
-    </form> -->
+        </li>
+        <li>
+          <label for="message"></label>
+          <textarea type="text" id="message" name="message" placeholder="Send us your message for more game ideas" ></textarea>
+          
+        </li>
+      </ul>
+      <input name="submit" class="btn" type="submit" value="Submit" />
+    </div>
+      </div>    
+    </form>
   </footer>
   <script src="main.js"></script>
   <script src="menu.js"></script>
+  <script src="main-form.js"></script>
   <!-- <script src="timeline.js"></script> -->
 
-  <body></body>
+  </body>
 </html>
