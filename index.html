@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./styles/style.css" />
-    <!-- <link rel="stylesheet" href="./styles/style-form.css" /> -->
+    <link rel="stylesheet" href="./styles/style-form.css" />
   </head>
   <body>
     <header class="zelda-bg">
@@ -58,32 +58,39 @@
       <div class="line"></div>
       <ul id="timeline" class="timeline"></ul>
     </main>
-    <footer>
-      <!-- <form action="">
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" required />
-
-      <label for="lastname">Last Name</label>
-      <input type="text" name="lastname" id="lastname" required />
-
-      <label for="email">Email</label>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="example@example.com"
-        required
-      />
-
-      <label for="tel">Phone</label>
-      <input type="tel" name="telephone" id="telephone" />
-
-      <label for="birth">Date of Birth</label>
-      <input type="date" name="birth" id="birth" required />
-
-      <button type="submit">Submit</button>
-      <button type="button">Cancel</button>
-    </form> -->
+    <footer id="contact">
+        <h3>Contact us</h3>
+        <form id="contactForm" action="#">
+          <ul>
+            <li class="half-form">
+                <label for="name"></label>
+                <input type="text" name="name" id="name" placeholder="Name" />
+    
+            </li>
+            <li class="half-form">
+              <label for="lastname"></label>
+              <input type="text" name="lastname" id="lastname" placeholder="Last name"/>
+    
+            </li>
+            <li class="half-form">	
+                  <label for="email"></label>
+                  <input type="email" name="email" id="email" placeholder="Email" />
+    
+            </li>
+            <li class="half-form">
+              <label for="tel"></label>
+              <input type="tel" name="telephone" id="tel" placeholder=Telephone >     
+    
+            </li>
+            <li>
+              <label for="message"></label>
+              <textarea type="text" id="message" name="message" placeholder="Send us your message for more game ideas" ></textarea>
+              
+            </li>
+          </ul>
+          <input name="submit" class="btn" type="submit" value="Submit" />
+  
+        </form>
     </footer>
     <script src="main.js"></script>
     <script src="menu.js"></script>
