@@ -1,27 +1,33 @@
 "use strict";
+
 document.addEventListener("scroll", function () {
-  var timelineContainer = document.querySelector(".timeline-container");
-  var timeline = document.querySelector(".timeline");
-  var scrollPosition = window.scrollY;
+  let header = document.querySelector("header");
+  let line = document.querySelector(".line");
+  let timelineCircles = document.querySelectorAll(".timeline-circle");
+  let mainSection = document.querySelector("main");
+  let scrollPosition = window.scrollY;
 
-  // Define el punto en el que la línea empezará a mostrarse (en la mitad de la pantalla)
-  var showPoint = window.innerHeight / 100;
+  // Calcula la posición en la que mainSection comienza
+  let mainTop = mainSection.getBoundingClientRect().top;
 
-  // Calcula la distancia desde el punto de inicio hasta la posición actual del scroll
-  var distanceFromShowPoint = Math.max(scrollPosition - showPoint);
-  console.log(distanceFromShowPoint);
+  // Si el scroll ha pasado el inicio de mainSection, muestra .line
+  if (mainTop < window.innerHeight) {
+    line.style.opacity = 1;
 
-  // Calcula el porcentaje de distancia en relación con la altura del contenedor
-  var percentage =
-    (distanceFromShowPoint / (timelineContainer.clientHeight / 2)) * 100;
-
-  if (percentage > 0) {
-    timeline.classList.add("show");
+    // Muestra gradualmente cada .timeline-circle
+    timelineCircles.forEach(function (circle, index) {
+      let circleTop = circle.getBoundingClientRect().top;
+      if (circleTop < window.innerHeight) {
+        setTimeout(function () {
+          circle.style.opacity = 1;
+        }, index * 200); // Retraso para un efecto de aparición escalonada
+      }
+    });
+  } else {
+    // Oculta .line y todos los .timeline-circle si el scroll retrocede
+    line.style.opacity = 0;
+    timelineCircles.forEach(function (circle) {
+      circle.style.opacity = 0;
+    });
   }
-  // else {
-  //   timeline.classList.remove("show");
-  // }
-
-  // Actualiza la altura del contenedor según la distancia desde el punto de inicio
-  timelineContainer.style.height = 2 + percentage / 1 + "rem";
 });
