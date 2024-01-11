@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
 }
 
 header {
@@ -13,6 +13,7 @@ header {
   position: relative;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 li {
@@ -51,17 +52,17 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 60px;
+  letter-spacing: 1px;
 }
 
 .nav-link {
   transition: 0.3s ease-out;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.1rem;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .nav-link:hover {
-  color: dodgerblue;
+  color: #bb9554;
 }
 
 .hamburger {
@@ -90,11 +91,49 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 4rem auto;
+  margin: 10rem auto;
   text-align: center;
   gap: 2rem;
-  max-width: 1000px;
+  max-width: 950px;
   width: 80%;
+}
+div.titulos {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 2rem;
+  max-width: 800px;
+}
+h1 {
+  color: #316570;
+  font-size: 3rem;
+}
+
+.titulos,
+.detail p {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: #555;
+}
+.detail img {
+  width: 100%;
+}
+hr {
+  border: 2px solid #bb9554;
+  border-radius: 2px;
+  width: 60%;
+}
+h2 {
+  color: #316570;
+  font-family: "Inter", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+
+  line-height: 1.2em;
 }
 /** -------------TIMELINE-------------------- */
 main {
@@ -104,24 +143,33 @@ main {
   margin: auto;
   gap: 0.5rem;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 .line {
   width: 5px;
-  color: blue;
-  background-color: black;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(49, 101, 112, 1) 25%,
+    rgba(49, 101, 112, 1) 75%,
+    rgba(49, 101, 112, 0) 100%
+  );
   position: absolute;
   height: 100%;
   left: 3%;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .timeline-circle {
   width: 30px;
   height: 30px;
-  background: #3f51b5;
+  background: #bb9554;
   border-radius: 50%;
   position: absolute;
   left: calc(3% - 12.5px);
+  border: 4px solid #316570;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .img-container {
@@ -164,10 +212,11 @@ main {
 article.card h3 {
   margin: 1.5rem auto 0;
   text-align: center;
-
+  font-family: "Inter", Helvetica, Arial, Lucida, sans-serif;
   font-style: oblique;
   font-size: 1.5rem;
   font-weight: 600;
+  color: #316570;
 }
 
 article.card p:nth-of-type(1) {
@@ -262,5 +311,11 @@ article.card :nth-of-type(2) {
     opacity: 0;
     top: 69px;
     transition: opacity 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    max-width: 1000px;
   }
 }
