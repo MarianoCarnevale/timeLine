@@ -110,7 +110,11 @@ div.titulos {
 }
 h1 {
   color: #316570;
-  font-size: 3rem;
+  font-size: 5rem;
+
+  font-family: "Instrument Serif", serif;
+  font-weight: 600;
+  line-height: 5rem;
 }
 
 .titulos,
