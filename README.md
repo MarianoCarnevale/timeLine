@@ -37,6 +37,7 @@ La "Línea de Tiempo de Juegos de Zelda" es una aplicación interactiva que pres
 
 - **Mejoras Adicionales:**
   - Añadido el botón 'Reverse Order' con funcionalidad para invertir el orden de la línea de tiempo.
+  - Animaciones en la línea de tiempo con Js.
   - Implementada validación JavaScript en el formulario para estructuras de correo electrónico y números telefónicos.
 
 ## Tecnologías Utilizadas
@@ -49,10 +50,4 @@ La "Línea de Tiempo de Juegos de Zelda" es una aplicación interactiva que pres
 
 Para utilizar el proyecto, simplemente navega a través de la línea de tiempo, interactúa con el formulario proporcionado y explora la rica narrativa de "The Legend of Zelda". Asegúrate de completar todos los campos requeridos en el formulario antes de hacer clic en "Submit" para almacenar tus datos localmente.
 
-## Contribuciones
 
-¡Apreciamos las contribuciones! Si deseas contribuir al proyecto, por favor, sigue las pautas de contribución y realiza solicitudes de extracción.
-
-## Autor
-
-[Mariano Carnevale y Francisco Jaramillo]
