@@ -238,7 +238,7 @@ article.card :nth-of-type(2) {
 @media (max-width: 720px) {
   header {
     background-size: cover;
-    background-position-x: -940px;
+    background-position-x: -800px;
     height: 82vh;
     aspect-ratio: auto;
   }
