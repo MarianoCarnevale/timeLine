@@ -55,12 +55,13 @@
       </p>
     </section>
     <main>
+      <div class="containerbtn"><button id="reversebtn" onclick="invertirOrden(datos)">⮃</button></div>
       <div class="line"></div>
       <ul id="timeline" class="timeline"></ul>
     </main>
     <footer id="contact">
         <h3>Contact us</h3>
-        <form id="contactForm" action="#">
+        <form id="contactform" action="#">
           <ul>
             <li class="half-form">
                 <label for="name"></label>
@@ -84,16 +85,18 @@
             </li>
             <li>
               <label for="message"></label>
-              <textarea type="text" id="message" name="message" placeholder="Send us your message for more game ideas" ></textarea>
+              <textarea type="text" id="message" name="message" placeholder="Send us your message for more games ideas" ></textarea>
               
             </li>
           </ul>
-          <input name="submit" class="btn" type="submit" value="Submit" />
+          <button id="submitbtn" type="submit" onclick="submitform(event)">Submit</button>
   
         </form>
     </footer>
     <script src="main.js"></script>
     <script src="menu.js"></script>
     <script src="timeline.js"></script>
+    <!-- <script src="reversebtn.js" ></script> -->
+    <script src="main-form.js" defer></script>
   </body>
 </html>
