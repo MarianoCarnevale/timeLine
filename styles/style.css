@@ -238,13 +238,17 @@ article.card :nth-of-type(2) {
 @media (max-width: 720px) {
   header {
     background-size: cover;
-    background-position-x: -702px;
+    background-position-x: -940px;
     height: 82vh;
     aspect-ratio: auto;
   }
   .card-container {
     margin: 5% auto;
     width: 90%;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 3rem;
   }
 }
 @media (min-width: 720px) {
@@ -315,6 +319,10 @@ article.card :nth-of-type(2) {
     opacity: 0;
     top: 69px;
     transition: opacity 0.5s ease-in-out;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 3rem;
   }
 }
 
