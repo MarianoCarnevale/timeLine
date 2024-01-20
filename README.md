@@ -49,5 +49,3 @@ La "Línea de Tiempo de Juegos de Zelda" es una aplicación interactiva que pres
 ## Instrucciones de Uso
 
 Para utilizar el proyecto, simplemente navega a través de la línea de tiempo, interactúa con el formulario proporcionado y explora la rica narrativa de "The Legend of Zelda". Asegúrate de completar todos los campos requeridos en el formulario antes de hacer clic en "Submit" para almacenar tus datos localmente.
-
-

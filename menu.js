@@ -5,7 +5,7 @@ const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-link");
 
 hamburger.addEventListener("click", toggleMenu);
-navLinks.forEach(link => link.addEventListener("click", closeMenu));
+navLinks.forEach((link) => link.addEventListener("click", closeMenu));
 window.addEventListener("scroll", closeMenuOnScroll);
 
 function toggleMenu() {
