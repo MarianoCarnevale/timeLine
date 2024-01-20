@@ -10,7 +10,7 @@ document.addEventListener("scroll", function () {
   // Calcula la posición en la que mainSection comienza
   let mainTop = mainSection.getBoundingClientRect().top;
 
-  // Si el scroll ha pasado el inicio de mainSection, muestra ..line
+  // Si el scroll ha pasado el inicio de mainSection, muestra .line
   if (mainTop < window.innerHeight) {
     line.style.opacity = 1;
 
