@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 * {
   padding: 0;
   margin: 0;
@@ -142,6 +145,15 @@ h2 {
   font-weight: 700;
   font-size: 2.2rem;
   line-height: 1.2em;
+  text-align: center;
+}
+
+form h2 {
+  color: white;
+}
+
+form hr {
+  margin: 1rem auto;
 }
 
 /** -------------TIMELINE-------------------- */

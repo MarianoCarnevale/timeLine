@@ -80,6 +80,31 @@
       <div class="line"></div>
       <ul id="timeline" class="timeline"></ul>
     </main>
+    <button id="resetbtn">RELOAD TIMELINE</button>
+
+    <form id="customCardForm" enctype="multipart/form-data">
+      <h2>Add your own card</h2>
+      <hr />
+      <label for="titulo">Title:</label>
+      <input type="text" id="titulo" name="titulo" required />
+
+      <label for="fecha">Year:</label>
+      <input type="number" id="fecha" name="fecha" required />
+
+      <label for="texto">Text:</label>
+      <textarea id="texto" name="texto" required></textarea>
+
+      <label for="imagenURL">Image (opcional):</label>
+      <input type="file" id="imagenURL" name="imagenURL" accept="image" />
+
+      <button type="submit" onclick="agregarTarjetaPersonalizada(event)">
+        Add Card
+      </button>
+
+      <button id="botonBorrar" type="button" onclick="borrarTarjetas()">
+        Delete Card
+      </button>
+    </form>
     <footer id="contact">
       <h3>Contact us</h3>
       <form id="contactform" action="#">
@@ -120,7 +145,7 @@
             ></textarea>
           </li>
         </ul>
-        <button id="submitbtn" type="submit" onclick="submitform(event)">
+        <button id="submitbtn" type="button" onclick="submitform(event)">
           Submit
         </button>
       </form>
@@ -129,5 +154,6 @@
     <script src="menu.js"></script>
     <script src="timeline.js"></script>
     <script src="main-form.js" defer></script>
+    <script src="newcard.js" defer></script>
   </body>
 </html>
