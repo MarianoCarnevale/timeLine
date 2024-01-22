@@ -14,6 +14,14 @@ La "Línea de Tiempo de Juegos de Zelda" es una aplicación interactiva que pres
 
   - Desarrollada la funcionalidad JavaScript para ordenar y desplegar eventos desde datos JSON en la línea de tiempo, y un botón que invierta el orden.
 
+- **Implementación del formulario para agregar una nueva tarjeta:**
+
+- Desarrollada la funcionalidad JavaScript crear una nueva tarjeta y guardar los datos del local storage. A su vez, un botón que reinicia la línea de tiempo.
+
+- **Implementación de un botón para borrar las tarjetas de forma individual:**
+
+- Desarrollada la funcionalidad JavaScript para borrar las tarjetas, y que al actualizar la app los datos se alacenen en el LocalStorage.
+
 - **Ajustes de Estilos y Semántica HTML:**
 
   - Realizadas correcciones y mejoras en los estilos de la línea y el círculo en la línea de tiempo.
@@ -25,7 +33,7 @@ La "Línea de Tiempo de Juegos de Zelda" es una aplicación interactiva que pres
   - Implementación de un efecto parallax en el header.
   - Ajuste de media queries para mejorar la responsividad.
 
-- **Finalización del Formulario:**
+- **Finalización del Formulario de Contacto:**
 
   - Completado el formulario con mejoras en estilo y color.
   - Añadidos anclajes a secciones para facilitar la navegación.
@@ -39,6 +47,9 @@ La "Línea de Tiempo de Juegos de Zelda" es una aplicación interactiva que pres
   - Añadido el botón 'Reverse Order' con funcionalidad para invertir el orden de la línea de tiempo.
   - Animaciones en la línea de tiempo con Js.
   - Implementada validación JavaScript en el formulario para estructuras de correo electrónico y números telefónicos.
+  - Implementación de de formulario para agregar tarjetas personalizadas y actualizar la línea de tiempo.
+  - Implementación de un botón que reinicie al estado inicial la línea temporal.
+  - Implementación para borrar cada una de las tarjetas.
 
 ## Tecnologías Utilizadas
 
