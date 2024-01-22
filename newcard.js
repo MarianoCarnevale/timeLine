@@ -1,0 +1,54 @@
+// Función para agregar una tarjeta personalizada
+function agregarTarjetaPersonalizada(event) {
+  event.preventDefault();
+  // Obtener detalles de la tarjeta del usuario desde los campos de formulario
+  const titulo = document.getElementById("titulo").value;
+  const fecha = document.getElementById("fecha").value;
+  const texto = document.getElementById("texto").value;
+  const imagenURL = document.getElementById("imagenURL").value;
+
+  // Validar que los campos requeridos estén llenos
+  if (!titulo || !fecha || !texto) {
+    alert("Por favor, complete todos los campos obligatorios.");
+    return;
+  }
+
+  // Crear un objeto con los detalles de la tarjeta
+  const nuevaTarjeta = {
+    title: titulo,
+    date: fecha,
+    text: texto,
+  };
+
+  // if (imagenURL) {
+  //   nuevaTarjeta.image = imagenURL;
+  // }
+
+  nuevaTarjeta.image = imagenURL ? imagenURL : "./images/no_image.jpg";
+
+  if (isNaN(fecha) || fecha.length !== 4 || parseInt(fecha) <= 1986) {
+    // La fecha no es válida
+    alert(
+      "Ingrese una fecha válida de 4 cifras numéricas posterior al primer juego."
+    );
+    // También podrías hacer algo como deshabilitar un botón de envío o mostrar un mensaje en un modal
+    // dependiendo de tus necesidades
+    return;
+  }
+
+  // Agregar la nueva tarjeta al conjunto de datos
+  datos.push(nuevaTarjeta);
+
+  // Ordenar los datos y actualizar la línea de tiempo
+  ordenarDatos();
+  updateTimeline();
+
+  // Guardar los datos actualizados en el localStorage
+  guardarEnLocalStorage();
+}
+
+// Función para guardar los datos en el localStorage
+function guardarEnLocalStorage() {
+  // Convertir los datos a formato JSON y guardar en el localStorage
+  localStorage.setItem("zeldaDatos", JSON.stringify(datos));
+}
