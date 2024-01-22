@@ -31,8 +31,6 @@ function agregarTarjetaPersonalizada(event) {
     alert(
       "Ingrese una fecha válida de 4 cifras numéricas posterior al primer juego."
     );
-    // También podrías hacer algo como deshabilitar un botón de envío o mostrar un mensaje en un modal
-    // dependiendo de tus necesidades
     return;
   }
 
