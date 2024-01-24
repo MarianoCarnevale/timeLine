@@ -7,17 +7,22 @@
 
 .containerbtn {
   position: absolute;
-  top: -32px;
+  top: -2rem;
+}
+.espadasboton {
+  position: relative;
+  top: -1.25rem;
+  width: 100%;
+  height: auto;
 }
 
 #reversebtn {
   background-color: #316570;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 1.75rem 0.5rem;
   cursor: pointer;
   border: none;
   border-radius: 5px;
+  width: 2.5rem;
   margin: 10px 0;
 }
 
@@ -140,14 +145,13 @@ textarea:focus,
   color: #e1e1e1;
 }
 
-#submitbtn:hover {
+#submitbtn:hover, #resetbtn:hover {
   border: 1px solid #253737;
   text-shadow: #333333 0 1px 0;
   background: #97c8d9;
 }
 
-#submitbtn:active {
-  margin-top: 1px;
+#submitbtn:active, #resetbtn:active {
   text-shadow: #333333 0 -1px 0;
   border: 1px solid #253737;
   background: #6da5a3;
@@ -173,6 +177,17 @@ button {
   font-weight: 500;
   /* font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif; */
   letter-spacing: 1px;
+}
+
+button:hover, [type="submit"]:hover {
+  border: 1px solid #253737;
+  text-shadow: #333333 0 1px 0;
+  background: #97c8d9;
+}
+button:active, button[type="submit"]:active {
+    text-shadow: #333333 0 -1px 0;
+  border: 1px solid #253737;
+  background: #6da5a3;
 }
 button#resetbtn {
   width: 600px;
