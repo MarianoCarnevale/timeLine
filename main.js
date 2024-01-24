@@ -21,16 +21,21 @@ function getZelda() {
   if (localStorageData) {
     // Si hay datos, cargarlos y actualizar la línea de tiempo
     datos = JSON.parse(localStorageData);
+    ordenarDatos(); // Ordenar los datos al cargar
     updateTimeline();
   } else {
     // Si no hay datos almacenados, realizar una solicitud fetch para obtenerlos
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        // Almacenar los datos en el almacenamiento local
-        localStorage.setItem("zeldaDatos", JSON.stringify(data));
-        // Asignar los datos y actualizar la línea de tiempo
+        // Ordenar los datos después de obtenerlos
         datos = data;
+        ordenarDatos();
+
+        // Almacenar los datos ordenados en el almacenamiento local
+        localStorage.setItem("zeldaDatos", JSON.stringify(datos));
+
+        // Actualizar la línea de tiempo
         updateTimeline();
       })
       .catch((err) => console.error(err.message));
