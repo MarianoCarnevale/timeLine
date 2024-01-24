@@ -132,3 +132,14 @@ function updateTimeline() {
 
 // Llamar a la función principal para inicializar la aplicación
 getZelda();
+
+//Scroll flecha top pagina
+document.addEventListener("DOMContentLoaded", function () {
+  let flecha = document.getElementById("flechascroll");
+  window.onscroll = function () {
+    let distanciadesplazada = 2400;
+    let posicionFooter = document.getElementById("contact").offsetTop
+    
+    flecha.style.display = (window.scrollY > distanciadesplazada && window.scrollY < (posicionFooter - window.innerHeight)) ? "block" : "none";
+  };
+});
