@@ -5,7 +5,12 @@
   font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
 }
 
-.containerbtn {
+.parrafoinicio {
+  color: #e1e1e1;
+  text-shadow: #333333;
+}
+
+.containerbtnespadas {
   position: absolute;
   top: -2rem;
 }
@@ -197,6 +202,27 @@ button#resetbtn {
 #imagenURL {
   padding: 10px;
 }
+
+#flechascroll {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 5%;
+  right: 1%;
+  font-size: 25px;
+  background-color: #316570;
+  color: #fff;
+  padding: 10px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+#flechascroll:active {
+  margin-top: 1px;
+  text-shadow: #333333 0 -1px 0;
+  border: 1px solid #253737;
+  background: #6da5a3;
+}
+
 
 @media (max-width: 720px) {
   .half-form {
