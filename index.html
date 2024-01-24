@@ -75,7 +75,10 @@
     </section>
     <main>
       <div class="containerbtn">
-        <button id="reversebtn" onclick="invertirOrden(datos)">⮃</button>
+        <button id="reversebtn" onclick="invertirOrden(datos)">
+          <img src="./images/espadasbtnillustrator.png" alt="boton-con-espadas" class="espadasboton">
+          
+        </button>
       </div>
       <div class="line"></div>
       <ul id="timeline" class="timeline"></ul>
@@ -94,15 +97,11 @@
       <label for="texto">Text:</label>
       <textarea id="texto" name="texto" required></textarea>
 
-      <label for="imagenURL">Image (opcional):</label>
-      <input type="file" id="imagenURL" name="imagenURL" accept="image" />
+      <label for="imagenURL">URL Image (opcional):</label>
+      <input type="url" id="imagenURL" name="imagenURL" accept="image" />
 
       <button type="submit" onclick="agregarTarjetaPersonalizada(event)">
         Add Card
-      </button>
-
-      <button id="botonBorrar" type="button" onclick="borrarTarjetas()">
-        Delete Card
       </button>
     </form>
     <footer id="contact">
