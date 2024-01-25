@@ -7,7 +7,6 @@ html {
   box-sizing: border-box;
   font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
 }
-
 header {
   background-image: url(../images/descarga.jpg);
   aspect-ratio: 16/9;
@@ -215,6 +214,21 @@ main {
   margin: 10rem auto 2rem;
   width: 100%;
   max-width: 1000px;
+}
+.card-container:nth-of-type(even) {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.card-container:nth-of-type(odd) {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.card-container.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .card {
