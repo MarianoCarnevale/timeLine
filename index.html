@@ -72,12 +72,24 @@
         unravel the connection between different titles and discover the events
         that shape Zelda's story.
       </p>
+      <div class="modal_container_btn">
+        <img
+          src="./images/escudo-menu.png"
+          class="modal_container_btn_img"
+          alt=""
+        />
+        <h4>ADD CARD</h4>
+      </div>
     </section>
+
     <main>
       <div class="containerbtn">
-        <button id="reversebtn" onclick="invertirOrden(datos)">
-          <img src="./images/espadasbtnillustrator.png" alt="boton-con-espadas" class="espadasboton">
-    <main>
+        <button id="reversebtn">
+          <img
+            src="./images/espadasbtnillustrator.png"
+            alt="boton-con-espadas"
+            class="espadasboton"
+          />
         </button>
       </div>
       <div class="line"></div>
@@ -85,25 +97,22 @@
     </main>
     <button id="resetbtn">RELOAD TIMELINE</button>
 
-    <form id="customCardForm" enctype="multipart/form-data">
+    <form id="customCardForm" class="modal">
       <h2>Add your own card</h2>
       <hr />
       <label for="titulo">Title:</label>
       <input type="text" id="titulo" name="titulo" required />
-
       <label for="fecha">Year:</label>
       <input type="number" id="fecha" name="fecha" required />
-
       <label for="texto">Text:</label>
       <textarea id="texto" name="texto" required></textarea>
-
       <label for="imagenURL">URL Image (opcional):</label>
       <input type="url" id="imagenURL" name="imagenURL" accept="image" />
-
       <button type="submit" onclick="agregarTarjetaPersonalizada(event)">
         Add Card
       </button>
     </form>
+
     <footer id="contact">
       <h3>Contact us</h3>
       <form id="contactform" action="#">
@@ -154,5 +163,6 @@
     <script src="timeline.js"></script>
     <script src="main-form.js" defer></script>
     <script src="newcard.js" defer></script>
+    <script src="modal.js"></script>
   </body>
 </html>
