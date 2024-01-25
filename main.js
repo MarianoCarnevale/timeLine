@@ -138,24 +138,35 @@ document.addEventListener("DOMContentLoaded", function () {
   let flecha = document.getElementById("flechascroll");
   window.onscroll = function () {
     let distanciadesplazada = 2400;
-    let posicionFooter = document.getElementById("contact").offsetTop
-    
-    flecha.style.display = (window.scrollY > distanciadesplazada && window.scrollY < (posicionFooter - window.innerHeight)) ? "block" : "none";
+    let posicionFooter = document.getElementById("contact").offsetTop;
+
+    flecha.style.display =
+      window.scrollY > distanciadesplazada &&
+      window.scrollY < posicionFooter - window.innerHeight
+        ? "block"
+        : "none";
   };
 });
 
 function agregarClaseVisible() {
-  var elementosAnimar = document.querySelectorAll('.card-container');
+  const elementosAnimar = document.querySelectorAll(".card");
+  const alturaPantalla =
+    window.innerHeight || document.documentElement.clientHeight;
+  const mitadPantalla = alturaPantalla / 2;
+  const umbral = 150; // Ajusta este valor según tus preferencias
 
-  elementosAnimar.forEach(function(elemento) {
-    var posicionElemento = elemento.getBoundingClientRect().top;
-    var alturaPantalla = window.innerHeight || document.documentElement.clientHeight;
+  elementosAnimar.forEach((elemento) => {
+    const posicionElemento = elemento.getBoundingClientRect().top;
+    const distanciaDesdeLaMitad = posicionElemento - mitadPantalla;
 
-    if (posicionElemento < alturaPantalla) {
-      elemento.classList.add('visible');
+    if (
+      distanciaDesdeLaMitad < mitadPantalla - umbral &&
+      distanciaDesdeLaMitad > -mitadPantalla
+    ) {
+      elemento.classList.add("visible");
     }
   });
 }
 
 // Evento de scroll para activar la función cuando se haga scroll
-window.addEventListener('scroll', agregarClaseVisible);
+window.addEventListener("scroll", agregarClaseVisible);

@@ -3,7 +3,7 @@
 console.log("El archivo JavaScript se ha cargado correctamente.");
 
 function submitform(event) {
-  event.preventDefault(); // Evitar el envío automático del formulario
+  // event.preventDefault(); // Evitar el envío automático del formulario
   console.log("La función submitform se ha llamado correctamente.");
 
   const name = document.getElementById("name").value;
@@ -33,7 +33,7 @@ function submitform(event) {
     alert("Please fill out all required fields.");
     return false; //modificado
   } else {
-    var formData = {
+    const formData = {
       name: name,
       lastname: lastname,
       email: email,

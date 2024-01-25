@@ -20,10 +20,6 @@ function agregarTarjetaPersonalizada(event) {
     text: texto,
   };
 
-  // if (imagenURL) {
-  //   nuevaTarjeta.image = imagenURL;
-  // }
-
   nuevaTarjeta.image = imagenURL ? imagenURL : "./images/no_image.jpg";
 
   if (isNaN(fecha) || fecha.length !== 4 || parseInt(fecha) <= 1986) {
@@ -43,10 +39,4 @@ function agregarTarjetaPersonalizada(event) {
 
   // Guardar los datos actualizados en el localStorage
   guardarEnLocalStorage();
-}
-
-// Función para guardar los datos en el localStorage
-function guardarEnLocalStorage() {
-  // Convertir los datos a formato JSON y guardar en el localStorage
-  localStorage.setItem("zeldaDatos", JSON.stringify(datos));
 }

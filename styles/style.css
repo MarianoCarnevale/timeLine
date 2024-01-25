@@ -94,11 +94,10 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10rem auto;
   text-align: center;
   gap: 2rem;
-  max-width: 950px;
-  width: 80%;
+  width: 100%;
+  padding: 6rem 0;
 }
 
 div.titulos {
@@ -126,10 +125,13 @@ h1 {
   font-size: 1.2rem;
   line-height: 1.3;
   color: #555;
+  width: 80%;
+  max-width: 900px;
 }
 
 .detail img {
-  width: 100%;
+  width: 80%;
+  max-width: 900px;
 }
 
 hr {
@@ -209,22 +211,22 @@ main {
 .card-container {
   display: flex;
   align-items: center;
-  margin: 2rem auto;
+  margin: 5rem auto 2rem;
   width: 100%;
   max-width: 1000px;
 }
-.card-container:nth-of-type(even) {
+.card-container:nth-of-type(even) .card {
   opacity: 0;
   transform: translateX(100%);
   transition: opacity 0.8s, transform 0.8s;
 }
-.card-container:nth-of-type(odd) {
+.card-container:nth-of-type(odd) .card {
   opacity: 0;
   transform: translateX(-100%);
   transition: opacity 0.8s, transform 0.8s;
 }
 
-.card-container.visible {
+.card-container .card.visible {
   opacity: 1;
   transform: translateX(0);
 }
@@ -269,6 +271,45 @@ article.card :nth-of-type(2) {
   text-align: center;
 }
 
+/** -------------- Modal -------------------------  */
+
+div.modal_container_btn {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 10%;
+  width: 80%;
+
+  align-items: end;
+  max-width: 1300px;
+  z-index: 2;
+}
+div.modal_container_btn img,
+h4 {
+  width: 50%;
+  max-width: 50px;
+  text-align: center;
+  margin: 3px 0;
+}
+
+.modal {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: none;
+  max-width: 800px;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal_container_btn_img:hover {
+  scale: 1.1;
+}
+
 @media (max-width: 720px) {
   header {
     background-size: cover;
@@ -283,6 +324,9 @@ article.card :nth-of-type(2) {
   h1 {
     font-size: 3rem;
     line-height: 3rem;
+  }
+  .timeline {
+    margin: 200px auto 2rem;
   }
 }
 
