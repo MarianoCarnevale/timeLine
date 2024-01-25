@@ -211,22 +211,22 @@ main {
 .card-container {
   display: flex;
   align-items: center;
-  margin: 10rem auto 2rem;
+  margin: 5rem auto 2rem;
   width: 100%;
   max-width: 1000px;
 }
-.card-container:nth-of-type(even) {
+.card-container:nth-of-type(even) .card {
   opacity: 0;
   transform: translateX(100%);
   transition: opacity 0.8s, transform 0.8s;
 }
-.card-container:nth-of-type(odd) {
+.card-container:nth-of-type(odd) .card {
   opacity: 0;
   transform: translateX(-100%);
   transition: opacity 0.8s, transform 0.8s;
 }
 
-.card-container.visible {
+.card-container .card.visible {
   opacity: 1;
   transform: translateX(0);
 }
@@ -286,19 +286,20 @@ div.modal_container_btn {
 }
 div.modal_container_btn img,
 h4 {
-  width: 15%;
-  max-width: 100px;
+  width: 50%;
+  max-width: 50px;
   text-align: center;
-  margin: 10px 0;
+  margin: 3px 0;
 }
 
 .modal {
   position: fixed;
-  top: 20%;
+  top: 10%;
   left: 0;
   right: 0;
   z-index: 2;
   display: none;
+  max-width: 800px;
 }
 
 .modal.active {

@@ -16,12 +16,12 @@
   z-index: 2;
 }
 .espadasboton {
-  max-width: 70px;
+  max-width: 40px;
 }
 
 #reversebtn {
   background-color: #316570;
-  padding: 1.75rem 0.5rem;
+  padding: 0.75rem 0.5rem;
   cursor: pointer;
   border: none;
   border-radius: 5px;
@@ -222,7 +222,6 @@ button#resetbtn {
   border: 1px solid #253737;
   background: #6da5a3;
 }
-
 
 @media (max-width: 720px) {
   .half-form {
