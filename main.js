@@ -143,3 +143,19 @@ document.addEventListener("DOMContentLoaded", function () {
     flecha.style.display = (window.scrollY > distanciadesplazada && window.scrollY < (posicionFooter - window.innerHeight)) ? "block" : "none";
   };
 });
+
+function agregarClaseVisible() {
+  var elementosAnimar = document.querySelectorAll('.card-container');
+
+  elementosAnimar.forEach(function(elemento) {
+    var posicionElemento = elemento.getBoundingClientRect().top;
+    var alturaPantalla = window.innerHeight || document.documentElement.clientHeight;
+
+    if (posicionElemento < alturaPantalla) {
+      elemento.classList.add('visible');
+    }
+  });
+}
+
+// Evento de scroll para activar la función cuando se haga scroll
+window.addEventListener('scroll', agregarClaseVisible);

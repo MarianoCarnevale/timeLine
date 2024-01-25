@@ -7,7 +7,7 @@
 
 .parrafoinicio {
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.85);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 .containerbtnespadas {
@@ -43,7 +43,6 @@
   border: 1px solid #253737;
   background: #6da5a3;
 }
-
 footer {
   background: rgba(49, 101, 112, 1) no-repeat center center fixed;
   padding: 30px;

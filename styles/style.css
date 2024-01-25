@@ -7,15 +7,6 @@ html {
   box-sizing: border-box;
   font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
 }
-div.capa-color{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(1, 121, 151, 0.486);
-}
-
 header {
   background-image: url(../images/descarga.jpg);
   aspect-ratio: 16/9;
@@ -221,6 +212,21 @@ main {
   margin: 2rem auto;
   width: 100%;
   max-width: 1000px;
+}
+.card-container:nth-of-type(even) {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.card-container:nth-of-type(odd) {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.card-container.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .card {
