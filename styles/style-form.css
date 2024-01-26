@@ -235,6 +235,6 @@ button#resetbtn {
   }
   button#resetbtn {
     width: 300px;
-    margin: 2rem calc(50% - 150px) 0;
+    margin: 2rem calc(50% - 150px);
   }
 }
