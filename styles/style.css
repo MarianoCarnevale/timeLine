@@ -277,12 +277,13 @@ div.modal_container_btn {
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 10%;
-  width: 80%;
+  top: 12%;
+  width: 98%;
 
   align-items: end;
   max-width: 1300px;
   z-index: 2;
+  cursor: pointer;
 }
 div.modal_container_btn img,
 h4 {
@@ -290,6 +291,9 @@ h4 {
   max-width: 50px;
   text-align: center;
   margin: 3px 0;
+  color: white;
+  text-shadow: -1px -1px 7px rgba(31, 65, 70, 1);
+  border-bottom: outset;
 }
 
 .modal {
