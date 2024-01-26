@@ -1,5 +1,5 @@
 "use strict";
-const modalBtn = document.querySelector(".modal_container_btn_img");
+const modalBtn = document.querySelector(".modal_container_btn");
 const modal = document.querySelector("#customCardForm");
 const closeBtn = document.querySelector(".close_form");
 

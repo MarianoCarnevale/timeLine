@@ -212,7 +212,7 @@ button#resetbtn {
   font-size: 25px;
   background-color: #316570;
   color: #fff;
-  padding: 10px;
+  padding: 10px 10px;
   border-radius: 100%;
   cursor: pointer;
 }
@@ -221,6 +221,12 @@ button#resetbtn {
   text-shadow: #333333 0 -1px 0;
   border: 1px solid #253737;
   background: #6da5a3;
+}
+.flechaspacebtn {
+  position: relative;
+  padding: 15px 20px 15px 20px;
+  right: 40%;
+  bottom: 12%;
 }
 
 @media (max-width: 720px) {
