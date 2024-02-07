@@ -38,5 +38,9 @@ function agregarTarjetaPersonalizada(event) {
   updateTimeline();
 
   // Guardar los datos actualizados en el localStorage
+
+  function guardarEnLocalStorage() {
+    localStorage.setItem("zeldaDatos", JSON.stringify(datos));
+  }
   guardarEnLocalStorage();
 }

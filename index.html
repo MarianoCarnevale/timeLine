@@ -100,7 +100,12 @@
     </button>
     <button id="resetbtn">RELOAD TIMELINE</button>
 
-    <form id="customCardForm" class="modal">
+    <form
+      id="customCardForm"
+      class="modal"
+      form
+      onsubmit="event.preventDefault(); agregarTarjetaPersonalizada(event);"
+    >
       <h2>Add your own card</h2>
       <hr />
       <label for="titulo">Title:</label>
@@ -111,9 +116,7 @@
       <textarea id="texto" name="texto" required></textarea>
       <label for="imagenURL">URL Image (opcional):</label>
       <input type="url" id="imagenURL" name="imagenURL" accept="image" />
-      <button type="submit" onclick="agregarTarjetaPersonalizada(event)">
-        Add Card
-      </button>
+      <button type="submit">Add Card</button>
       <button class="close_form">Close</button>
     </form>
 
