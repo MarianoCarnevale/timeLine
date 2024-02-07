@@ -4,7 +4,10 @@ const modal = document.querySelector("#customCardForm");
 const closeBtn = document.querySelector(".close_form");
 
 modalBtn.addEventListener("click", toggleModal);
-closeBtn.addEventListener("click", toggleModal);
+closeBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+  closeModal();
+});
 
 function toggleModal() {
   modal.classList.toggle("active");
